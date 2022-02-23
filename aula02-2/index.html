@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Meu primeiro site</title>
+  </head>
+  <body>
+    <div id="container">
+    </div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+
+      function Box({item, preco}){
+
+        // const {item} = props;
+
+        return(
+          <>
+            <li>{item ? item: "Nao passou o item"}</li>
+          </>
+        )
+      }
+
+
+      //const box = ({ item, preco })=> <li>{item ? item : "Nao passou o item"}</li>
+
+
+      const itens = ["Guarda roupa", "Cama", "Colchao"];
+
+
+      const container = 
+      <ul>
+        {
+          itens.map((item, index)=> <Box key={index.toString()} item={item} />)
+        }
+
+      </ul>
+
+
+
+      ReactDOM.render(container, document.getElementById("container"));
+    </script>
+  </body>
+</html>

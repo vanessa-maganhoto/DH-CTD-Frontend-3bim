@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Verdureiro</title>
+    <link rel="stylesheet" href="./styles.css"/>
+  </head>
+  <body>
+    <div id="container">
+    </div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+
+      function Produto({p}){
+
+        
+        return(
+          <>
+            
+            <li>{p ? p: "Nao passou o item"}</li>
+          </>
+        )
+      }
+
+
+      const pEstoque = ["Pera", "Alface", "Rúcula", "Melão"]
+
+      const pFaltantes = ["Cebola", "Tomate", "Salsinha"]
+
+
+      const itens = ["Guarda roupa", "Cama", "Colchao"];
+
+
+      const container = 
+      <section>
+        <h2>Produtos em Estoque</h2>
+        <ul>
+          {
+            pEstoque.map((p, index)=> <Produto key={index.toString()} p={p} />)
+          }
+
+        </ul>
+
+        <h2>Produtos em Falta</h2>
+        <ul>
+          {
+            pFaltantes.map((p, index)=> <Produto key={index.toString()} p={p} />)
+          }
+
+        </ul>
+      </section>
+
+    
+
+      ReactDOM.render(container, document.getElementById("container"));
+    </script>
+  </body>
+</html>
+
