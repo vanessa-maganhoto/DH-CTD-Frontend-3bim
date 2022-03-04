@@ -1,0 +1,18 @@
+.header-home{
+    background-color: rgb(251, 251, 218);
+    display: flex;
+    align-items: center;
+}
+
+.logo-header{
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+}
+.titulo_header{
+    position: absolute;
+    left: 40%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    color: rgb(71, 140, 219);
+}
